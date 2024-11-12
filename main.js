@@ -1,0 +1,127 @@
+import { frases, libros, chistes, reseñasDeDiscos } from './datos.js'
+
+
+//funcion para la eleccion de citas filosoficas
+function citaFilosofica(){ 
+    let indiceAleatorio = Math.floor(Math.random() * frases.length);
+    return frases[indiceAleatorio]; 
+}
+
+//Funcion para la opcion 2 de recomendaciones de libros
+function librosSeleccion(){ 
+    let indiceAleatorio = Math.floor(Math.random() * libros.length);
+    return libros[indiceAleatorio]; 
+}
+
+// funcion para la opcion 3
+function chistesSeleccion(){ 
+    let indiceAleatorio = Math.floor(Math.random() * chistes.length);
+    return chistes[indiceAleatorio]; 
+}
+
+//Funcion para la opcion 4
+function discosSeleccion(){ 
+    let indiceAleatorio = Math.floor(Math.random() * reseñasDeDiscos.length);
+    return reseñasDeDiscos[indiceAleatorio]; 
+}
+
+//Funcion dejar propina
+function dejarPropina(){
+    let siGusto = confirm("Desearía dejar alguna propina al programador?😁")
+    if(siGusto){
+        let cuanto = Number(prompt("Cuantos $ le gustaría dar?:"))
+        if(cuanto <= 0){
+            alert("Tacaño/a 😛");
+        }else if(cuanto >=1 && cuanto <= 30){
+            alert("Tacaño pero generoso 😛")
+        }else if (isNaN(cuanto)){
+            alert("Operación cancelada. Tenías que ingresar un numero nomas 💩");
+        }else if(cuanto > 30 && cuanto < 100){
+            alert("Muchas Gracias por el aporte 😁")
+        }else if(cuanto > 100){
+            alert("Gracias Sr millonario 🤑😜")
+        }
+    }else{
+        alert("No hay problema 😒.Nos vemos!")
+    }
+    
+}
+//Funcion contraseña
+function pedirContraseña(){
+    let contraseñaUsuario = prompt("Antes de empezar. Cree una contraseña")
+    if (contraseñaUsuario === null){
+        alert("Operación cancelada. No se ha creado una contraseña."); return;
+    }
+
+    let intentos = 0
+    let maxIntentos = 4;
+
+    while(intentos < maxIntentos){
+        let contraseña = prompt("Compruebe la contraseña");
+        if (contraseña === null) { alert("Operación cancelada."); 
+        return;
+        } 
+        if(contraseña === contraseñaUsuario){
+            alert("Contraseña correcta! has ingresado a la matrix 😎"); break;
+        }else{
+            alert("La contraseña es incorrecta");
+            intentos++;
+        }
+    } 
+    if (intentos === maxIntentos) { alert("Has excedido el número máximo de intentos.");
+        return;
+    }
+    
+    
+}
+
+//El programa arranca pidiendo al usuario crear una contraseña antes de arrancar
+//el programa pide que ingrese un nombre para nombrarle y darle las opciones de lo que puede hacer
+
+function principal(){
+    pedirContraseña();
+
+    let nombre = prompt("Ingrese su nombre");
+    if (nombre === null){ 
+        alert("Operación cancelada.");
+        return;
+    }
+    let seguir = true
+    while (seguir){
+        let inicio = Number(prompt(`Hola! ${nombre}!\nElegí una de las opciones del 1 al 4\n1. Cita filosofica para el día de hoy\n2. Recomendacion de libros\n3. Un chistesin\n4. Recomendacion de discos`));
+    if (isNaN(inicio)){
+        alert("Operación cancelada. Tenías que ingresar un numero nomas 💩");
+        seguir = confirm("Queres ver el menu de vuelta?");
+        continue;
+        }
+        switch(inicio){
+            case 1:
+            alert(citaFilosofica())
+            alert("Espero que esto te haya hecho reflexionar 😌")
+            seguir = confirm("Queres ver el menu de vuelta?")
+            break
+        case 2:
+            alert(librosSeleccion())
+            alert("Espero tus comentarios del libro 🤸‍♂️")
+            seguir = confirm("Queres ver el menu de vuelta?")
+            break
+        case 3:
+            alert(chistesSeleccion())
+            alert(" 🤣 🤸‍♂️")
+            seguir = confirm("Queres ver el menu de vuelta?")
+            break
+        case 4:
+            alert(discosSeleccion())
+            alert("Espero tus comentarios del disco 😎")
+            seguir = confirm("Queres ver el menu de vuelta?")
+            break
+        default:
+            alert("Opcion no valida. Tenes que ingresar un numero del UNO AL CUA TRO 😫")
+            seguir = confirm("Queres ver el menu de vuelta?")
+            break;
+    }   
+    }
+    dejarPropina();
+    alert("Adios pequeño saltamontes 🤸‍♂️") 
+}
+principal();

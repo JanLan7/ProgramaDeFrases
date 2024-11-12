@@ -1,4 +1,4 @@
-import { frases, libros, chistes, reseñasDeDiscos } from './datos.js'
+import { frases, libros, chistes, reseñasDeDiscos, microcuentos } from './datos.js'
 
 
 //funcion para la eleccion de citas filosoficas
@@ -23,6 +23,12 @@ function chistesSeleccion(){
 function discosSeleccion(){ 
     let indiceAleatorio = Math.floor(Math.random() * reseñasDeDiscos.length);
     return reseñasDeDiscos[indiceAleatorio]; 
+}
+
+//funcion para la opcion 5
+function microcuentosSeleccion(){ 
+    let indiceAleatorio = Math.floor(Math.random() * microcuentos.length);
+    return microcuentos[indiceAleatorio]; 
 }
 
 //Funcion dejar propina
@@ -88,7 +94,7 @@ function principal(){
     }
     let seguir = true
     while (seguir){
-        let inicio = Number(prompt(`Hola! ${nombre}!\nElegí una de las opciones del 1 al 4\n1. Cita filosofica para el día de hoy\n2. Recomendacion de libros\n3. Un chistesin\n4. Recomendacion de discos`));
+        let inicio = Number(prompt(`Hola! ${nombre}!\nElegí una de las opciones del 1 al 4\n1. Cita filosofica para el día de hoy\n2. Recomendacion de libros\n3. Un chistesin\n4. Recomendacion de discos\n5. Un microcuento`));
     if (isNaN(inicio)){
         alert("Operación cancelada. Tenías que ingresar un numero nomas 💩");
         seguir = confirm("Queres ver el menu de vuelta?");
@@ -113,6 +119,11 @@ function principal(){
         case 4:
             alert(discosSeleccion())
             alert("Espero tus comentarios del disco 😎")
+            seguir = confirm("Queres ver el menu de vuelta?")
+            break
+        case 5:
+            alert(microcuentosSeleccion())
+            alert("Espero tus comentarios del microcuento 😎")
             seguir = confirm("Queres ver el menu de vuelta?")
             break
         default:

@@ -148,3 +148,37 @@ export const reseñasDeDiscos = [
     "\"Automatic for the People\": R.E.M. presenta un álbum introspectivo y melódico, explorando temas de mortalidad y humanidad con gran sensibilidad.",
     "\"The Joshua Tree\": U2 fusiona el rock con sonidos atmosféricos, creando un álbum épico que aborda temas de espiritualidad y justicia social."
 ];
+
+//datos de microcuentos
+export const microcuentos = [
+    "\"Augusto Monterroso\": Cuando despertó, el dinosaurio todavía estaba allí.",
+    "\"Franz Kafka\": Al pasar frente a la casa, miró hacia adentro. El interior era sencillo. Todo lo demás es incomprensible.",
+    "\"Ana María Shua\": Cuando tocó su rostro, descubrió que estaba tocando una máscara. Entonces comprendió que todas lo eran.",
+    "\"Julio Cortázar\": En la pulpería, después de tres noches de lluvia, se escuchó el trote de un caballo que no llegaba nunca.",
+    "\"Luis Mateo Díez\": La vida es una burbuja a punto de estallar. Sin embargo, la burbuja no estalla.",
+    "\"José Luis Borges\": En la vida de todo hombre hay dos grandes días: el día en que nace y el día en que descubre para qué ha nacido.",
+    "\"Italo Calvino\": Estaba decidido a encontrar un diamante en la playa de arena. Al atardecer, lo halló, en su propio corazón.",
+    "\"Javier Tomeo\": En la última página de su diario escribió: ‘Mañana empiezo a vivir’. No llegó.",
+    "\"Félix J. Palma\": Sabía que no podía mirarla y sin embargo, no podía apartar la vista. Ella tampoco, aunque estaba ciega.",
+    "\"Juan José Arreola\": Y Dios le preguntó: ‘¿Qué haces aquí?’. El hombre respondió: ‘Vengo a que me devuelvas el costado’.",
+    "\"Margaret Atwood\": Nunca más le temió a la oscuridad, pues sabía que el monstruo estaba dentro de ella.",
+    "\"Leonardo Da Vinci\": Por mucho que volase el ave de oro, jamás se alejó de su jaula.",
+    "\"Ángel Olgoso\": El eco respondía antes de que nadie hablase. Se dieron cuenta de que la montaña estaba viva.",
+    "\"Quim Monzó\": Llovió todo el día y toda la noche, y a la mañana siguiente el pueblo ya no estaba.",
+    "\"Juan Rulfo\": Las palabras que no dije me hicieron un nido en la garganta. Ahí viven todavía.",
+    "\"Ana María Matute\": El espejo no reflejaba a quien lo miraba, sino a quien soñaba.",
+    "\"Mario Benedetti\": El miedo del escarabajo es ser grande. El miedo del hombre es ser pequeño.",
+    "\"H. P. Lovecraft\": El hombre que nunca había visto un espejo no supo que era él quien lo miraba con odio.",
+    "\"Gabriel García Márquez\": En cien años de olvido, un hombre volvió a encontrar su sombra y no la reconoció.",
+    "\"Horacio Quiroga\": La última gota de lluvia golpeó el suelo, y el silencio se volvió tan profundo que dolía.",
+    "\"Isabel Allende\": Cuando ella cerró el libro, él se quedó atrapado en sus páginas para siempre.",
+    "\"Frederico García Lorca\": En el rincón más oscuro del bosque, una luciérnaga creía ser la luna.",
+    "\"Oscar Wilde\": La rosa sintió celos de la sangre cuando el poeta se cortó escribiendo sobre ella.",
+    "\"Anton Chejov\": Las estrellas no le respondían porque ya sabían que él no escucharía.",
+    "\"Edgar Allan Poe\": La sombra que lo seguía no era suya, sino del ser que habitaba en sus pensamientos.",
+    "\"Ray Bradbury\": El viento soplaba, pero esta vez no movía nada, porque ya no quedaba nada que mover.",
+    "\"Juan Bosch\": Un ladrón le robó la voz, y cuando quiso pedir ayuda, solo su eco respondió.",
+    "\"Charles Dickens\": Dejó la llave en la puerta, pero su libertad nunca se asomó.",
+    "\"Mark Twain\": Había tantas nubes que el cielo dejó de existir, y la lluvia nunca supo de dónde caía.",
+    "\"Haruki Murakami\": Cuando despertó, encontró el mundo desordenado y comprendió que era su reflejo."
+];

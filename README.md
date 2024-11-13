@@ -1,4 +1,4 @@
-## 1ra entrega Javascript
+## Programa en Javascript
 Este programa interactivo en Js permite al usuario obtener: citas filosoficas,recomendaciones de libros, chistes y reseñas de discos al azar
 
 ## Funcionalidades 
@@ -6,6 +6,7 @@ Este programa interactivo en Js permite al usuario obtener: citas filosoficas,re
 2. Recomendaciones de libros.
 3. Chistes divertidos.
 4. Reseñas de discos musicales.
+5. Microcuentos
 
 ## Usos
 Al iniciar el programa se le pide al usuario que cree una contraseña.

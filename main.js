@@ -53,33 +53,57 @@ function dejarPropina(){
     
 }
 //Funcion contraseña
-function pedirContraseña(){
-    let contraseñaUsuario = prompt("Antes de empezar. Cree una contraseña")
-    if (contraseñaUsuario === null){
-        alert("Operación cancelada. No se ha creado una contraseña."); return;
+function pedirContraseña() {
+    let contraseñaUsuario = prompt("Antes de empezar. Cree una contraseña");
+
+    // Verificar si la contraseña creada es nula o está vacía
+    if (contraseñaUsuario === null || contraseñaUsuario.trim() === "") {
+        alert("Operación cancelada. No se ha creado una contraseña.");
+        return false; // Indica que no se completó la creación de la contraseña
     }
 
-    let intentos = 0
+    let intentos = 0;
     let maxIntentos = 4;
 
-    while(intentos < maxIntentos){
+    while (intentos < maxIntentos) {
         let contraseña = prompt("Compruebe la contraseña");
-        if (contraseña === null) { alert("Operación cancelada."); 
-        return;
-        } 
-        if(contraseña === contraseñaUsuario){
-            alert("Contraseña correcta! has ingresado a la matrix 😎"); break;
-        }else{
+
+        if (contraseña === null) {
+            alert("Operación cancelada.");
+            return false; // Indica que se canceló el proceso
+        }
+
+        // Validar que la contraseña ingresada no esté vacía
+        if (contraseña.trim() === "") {
+            alert("La contraseña no puede estar vacía.");
+            continue;
+        }
+
+        if (contraseña === contraseñaUsuario) {
+            alert("Contraseña correcta! has ingresado a la matrix 😎");
+            return true; // Indica que la autenticación fue exitosa
+        } else {
             alert("La contraseña es incorrecta");
             intentos++;
         }
-    } 
-    if (intentos === maxIntentos) { alert("Has excedido el número máximo de intentos.");
-        return;
     }
-    
-    
+
+    if (intentos === maxIntentos) {
+        alert("Has excedido el número máximo de intentos.");
+        return false; // Indica que se alcanzó el límite de intentos
+    }
 }
+
+// Llamar a la función pedirContraseña y verificar su resultado
+if (pedirContraseña()) {
+    // Si la autenticación es exitosa, continuar con el siguiente paso
+    let nombreUsuario = prompt("Ingrese su nombre");
+    alert("Bienvenido, " + nombreUsuario);
+} else {
+    // Si la autenticación no es exitosa, detener el flujo del programa
+    alert("No puedes continuar sin autenticarte.");
+}
+
 
 //El programa arranca pidiendo al usuario crear una contraseña antes de arrancar
 //el programa pide que ingrese un nombre para nombrarle y darle las opciones de lo que puede hacer
@@ -94,7 +118,7 @@ function principal(){
     }
     let seguir = true
     while (seguir){
-        let inicio = Number(prompt(`Hola! ${nombre}!\nElegí una de las opciones del 1 al 4\n1. Cita filosofica para el día de hoy\n2. Recomendacion de libros\n3. Un chistesin\n4. Recomendacion de discos\n5. Un microcuento`));
+        let inicio = Number(prompt(`Hola! ${nombre}!\nElegí una de las opciones del 1 al 5\n1. Cita filosofica para el día de hoy\n2. Recomendacion de libros\n3. Un chistesin\n4. Recomendacion de discos\n5. Un microcuento`));
     if (isNaN(inicio)){
         alert("Operación cancelada. Tenías que ingresar un numero nomas 💩");
         seguir = confirm("Queres ver el menu de vuelta?");
@@ -127,7 +151,7 @@ function principal(){
             seguir = confirm("Queres ver el menu de vuelta?")
             break
         default:
-            alert("Opcion no valida. Tenes que ingresar un numero del UNO AL CUA TRO 😫")
+            alert("Opcion no valida. Tenes que ingresar un numero del UNO AL CIN CO 😫")
             seguir = confirm("Queres ver el menu de vuelta?")
             break;
     }   
